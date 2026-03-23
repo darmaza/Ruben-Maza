@@ -1,0 +1,290 @@
+/*Esta propiedad se le aplica al elemento raíz (html) y le dice al navegador: "Cuando te desplaces a un ID,*/
+html {
+    scroll-behavior: smooth;    /* Hace que el salto sea suave y no brusco */
+    scroll-padding-top: 80px;   /* Ajusta este número según la altura de tu menú */
+}
+
+/* Reset básico para que todo se vea consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Liberation Serif', serif;          /* o Georgia si la tenés */
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;                         /* centra la página */
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #2980b9;
+    margin: 40px 0 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h3{
+    color:#2980b9;
+    margin: 40px 0 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+/* Imagen */
+img {
+    max-width: 100%;          /* nunca más ancha que la pantalla */
+    height: auto;             /* mantiene proporciones */
+    display: block;           /* centra mejor */
+    margin: 20px auto;        /* espacio arriba/abajo y centrada */
+    border-radius: 8px;       /* bordes redondeados opcionales */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* sombra suave */
+}
+
+.jesus {
+    max-width: 25%;          /* nunca más ancha que la pantalla */
+    height: auto;             /* mantiene proporciones */
+    display: block;           /* centra mejor */
+    margin: 20px auto;        /* espacio arriba/abajo y centrada */
+    border-radius: 8px;       /* bordes redondeados opcionales */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* sombra suave */
+}
+
+/* Footer */
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 0px 0px;
+    margin-top: 60px;
+    min-height: 0,5px;
+    display: flex;
+    justify-content:center;
+    align-items:normal;
+    margin-top: 60px;
+    font-size: 0,5em;
+}
+.boton {
+    display: inline-block;
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin: 20px 0;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #213696;
+}
+  
+ul {
+    padding-left: 50px;          /* más espacio adentro */
+    margin: 20px 0;              /* espacio arriba y abajo de la lista completa */
+    list-style-position: outside; /* viñetas afuera del texto (por defecto) */
+}
+
+li {
+    margin-bottom: 8px;          /* espacio entre items de la lista */
+}
+
+ol {
+    padding-left: 50px;          /* más espacio adentro */
+    margin: 20px 0;              /* espacio arriba y abajo de la lista completa */
+    list-style-position: outside; /* viñetas afuera del texto (por defecto) */
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #34495e;   /* gris oscuro, combina con tu footer */
+    padding: 15px 0;
+    position: fixed;            /* con "sticky" se queda arriba al hacer scroll y con "fixed" se queda fijo aunque se haga scroll*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;               /* queda por encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.menu {
+    list-style: none;            /* quita viñetas */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;       /* items uno al lado del otro */
+    margin: 0 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #2980b9;   /* azul al pasar el mouse */
+    border-radius: 5px;
+    color: white;
+}
+
+/* Responsive: en pantallas chicas, items más juntos */
+@media (max-width: 768px) {
+    .menu li {
+        margin: 0 10px;
+    }
+    
+    .menu a {
+        padding: 8px 10px;
+        font-size: 0.95em;
+    }
+}
+body {
+    padding-top: 70px;   /* altura aproximada del nav + margen */
+}
+/* Este es el contenedor que pusimos en el HTML */
+.bloque-introduccion {
+    display: flex;          /* Alinea los hijos (foto y texto) en fila */
+    align-items: center;    /* Centra la foto y el texto verticalmente entre sí */
+    justify-content: center; /* Centra todo el grupo en el medio del header */
+    gap: 30px;              /* Deja un espacio de 30px entre la foto y el texto */
+    margin-top: 40px;       /* Separa este bloque del menú de arriba */
+
+}
+/* Estilos específicos para la foto de perfil */
+.foto-perfil {
+    width: 150px;           /* Ancho fijo para que sea un círculo perfecto */
+    height: 150px;          /* Altura fija igual al ancho */
+    border-radius: 50%;     /* ESTA ES LA MAGIA: lo convierte en círculo */
+    object-fit: cover;      /* Asegura que la cara no se estire si la foto no es cuadrada */
+    border: 5px solid white; /* Un borde blanco sutil que la separa del fondo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra más fuerte para que "flote" */
+    margin: 0 auto 20px;     /* Centrada horizontalmente y 20px de espacio abajo */
+    display: block;          /* Necesario para centrar con margin: auto */
+}
+/* Alineamos el texto a la izquierda para que se lea bien al lado de la foto */
+.texto-introduccion {
+    text-align: left;
+}
+.texto-introduccion h1 {
+    margin: 0;              /* Quitamos márgenes extra para que quede alineado */
+}
+
+/* 1. OCULTAR LAS FOTOS GRANDES POR DEFECTO */
+.lightbox {
+    display: none;          /* <-- ¡ESTA ES LA CLAVE! Así no se ven al cargar la página */
+    position: fixed;        /* Hace que flote sobre todo lo demás */
+    z-index: 2000;          /* Asegura que esté por encima del menú */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro semitransparente */
+}
+
+/* 2. MOSTRAR SOLO CUANDO SE HACE CLIC (Target) */
+.lightbox:target {
+    display: flex;          /* Cambia de 'none' a 'flex' para mostrarse */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 3. ESTILO DE LA IMAGEN DENTRO DEL LIGHTBOX */
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Crea columnas automáticas */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.contenedor-grid1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Crea columnas automáticas */
+    gap: 15px;
+    margin-top: 20px;
+}
+.foto-miniatura {
+    width: 100%;            /* La foto ocupa todo el ancho de su columna */
+    height: 150px;
+    object-fit: cover;      /* Recorta la foto para que todas sean del mismo tamaño */
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.foto-miniatura:hover {
+    filter: brightness(1.1); /* Brilla un poquito al pasar el mouse */
+    transform: translateY(-5px); /* Se eleva sutilmente */
+}
+
+/* Botón de cerrar Lightbox (la X) */
+.cerrar {
+    position: absolute;
+    top: 25px;              /* Un poco más separado del borde superior */
+    right: 25px;            /* Un poco más separado del borde derecho */
+    color: white;           /* Color de la X */
+    font-size: 32px;        /* Tamaño de la X un poco más chico para que entre en el círculo */
+    font-weight: bold;      /* X bien gruesa */
+    text-decoration: none;  /* Quita el subrayado de enlace */
+    
+    /* Contorno y Fondo Circular (Colorido) */
+    background-color: #e74c3c; /* Un rojo vibrante (podes usar #2980b9 si preferís azul) */
+    border: 3px solid white;  /* Un contorno blanco grueso para que resalte */
+    border-radius: 50%;     /* Lo hace un círculo perfecto */
+    
+    /* Tamaño del Botón Circular */
+    width: 50px;            /* Ancho fijo */
+    height: 50px;           /* Alto fijo */
+    
+    /* Centrado de la X dentro del círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Sombra para darle profundidad */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    
+    /* Transición suave para el hover */
+    transition: background-color 0.3s, transform 0.3s;
+    
+    z-index: 2100;          /* Asegura que esté por encima de la imagen ampliada */
+}
+
+/* Efecto al pasar el mouse por encima (Hover) */
+.cerrar:hover {
+    background-color: #c0392b; /* Un rojo más oscuro al pasar el mouse */
+    transform: scale(1.1) rotate(90deg); /* Se agranda un poco y gira 90 grados (¡queda muy pro!) */
+    color: #f1c40f;          /* La X se vuelve amarilla (más colorido aún) */
+}
